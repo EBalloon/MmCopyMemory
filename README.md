@@ -1,4 +1,4 @@
-EAC scan module memory with MmCopyMemory
+EAC scans memory with MmCopyMemory
 - Sections
 - Memory outside a legitimate module
 - etc
