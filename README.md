@@ -3,7 +3,7 @@
 
 
   	// bypass scans from MmCopyMemory (this only ignores physical scan)
-	auto MmCopyMemoryPtr = (uintptr_t)pMmCopyMemory;
+	auto MmCopyMemoryPtr = (uintptr_t)MmCopyMemory;
 	for (int index = 0; index < PAGE_SIZE; index++)
 	{
 		auto Address = MmCopyMemoryPtr + index;
@@ -15,7 +15,7 @@
 			DbgPrintEx(0, 0, "Address: 0x%p\n", (void*)Address);
 			// Disable Interruptions
 			*reinterpret_cast<uint8_t*>(Address) = 0x02; // set bit to (2 = MM_COPY_MEMORY_VIRTUAL)
-				// Enable Interruptions
+			// Enable Interruptions
 			break;
 		}
 	}
