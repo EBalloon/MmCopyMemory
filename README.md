@@ -3,7 +3,7 @@ EAC scans memory with MmCopyMemory
 - Memory outside a legitimate module
 - etc
 
-The easiest way around these checks is to change the bit to 0x2
+The easiest way around these checks is to change the bit 0xFFFFFFFC to 0x2
 
 let's check
 
