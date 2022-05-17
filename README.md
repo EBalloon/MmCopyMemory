@@ -1,7 +1,5 @@
 
 
-
-
   	// bypass scans from MmCopyMemory (this only ignores physical scan)
 	auto MmCopyMemoryPtr = (uintptr_t)MmCopyMemory;
 	for (int index = 0; index < PAGE_SIZE; index++)
@@ -24,7 +22,12 @@
 
 EAC read like this
 
-	MmCopyMemory(Buffer, Address, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
+	auto Buffer = ExAllocatePoolWithTag(PagedPool, MEM_SIZE, ExTag);
+        if (Buffer)
+        {	
+		MmCopyMemory(Buffer, Address, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
+	}
+
 
 
 ![5KPhKr8](https://user-images.githubusercontent.com/29626806/168706720-9d3ee31d-3cf4-4eab-8522-55abb89c4443.png)
