@@ -24,7 +24,7 @@ EAC read like this
 
 # Example
 
-  	// bypass scans from MmCopyMemory (this only ignores physical scan)
+  	// bypass scans from MmCopyMemory (this only ignores VIRTUAL scans)
 	auto MmCopyMemoryPtr = (uintptr_t)MmCopyMemory;
 	for (int index = 0; index < PAGE_SIZE; index++)
 	{
