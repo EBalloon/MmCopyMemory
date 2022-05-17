@@ -45,7 +45,7 @@ EAC read like this
 # Result
 
 	 if ( !a4 || (a4 & 0xFFFFFFF2) != 0 || ((a4 - 1) & a4) != 0 || KeGetCurrentIrql() > 1u )
-    		return STATUS_INVALID_PARAMETER_4;
+    	return STATUS_INVALID_PARAMETER_4;
 
 
 # After 30 min, PATCHGUARD!
