@@ -2,7 +2,7 @@
 
 
 
-  // bypass scans from MmCopyMemory (this only ignores physical scan)
+  	// bypass scans from MmCopyMemory (this only ignores physical scan)
 	auto MmCopyMemoryPtr = (uintptr_t)pMmCopyMemory;
 	for (int index = 0; index < PAGE_SIZE; index++)
 	{
