@@ -22,7 +22,7 @@
 
 EAC read like this
 
-    auto Buffer = ExAllocatePoolWithTag(PagedPool, MEM_SIZE, ExTag);
+    auto Buffer = ExAllocatePoolWithTag(PagedPool, PAGE_SIZE, ExTag);
     if (!Buffer)
        return failed;
       
