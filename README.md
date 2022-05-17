@@ -44,7 +44,7 @@ EAC read like this
 
 # Result
 
-	 if ( !Flags || (Flags & 0x02) != 0 || ((Flags - 1) & Flags) != 0 || KeGetCurrentIrql() > 1u )
+	 if ( !Flags || (Flags & 0xffffff02) != 0 || ((Flags - 1) & Flags) != 0 || KeGetCurrentIrql() > 1u )
     	return STATUS_INVALID_PARAMETER_4;
 
 
