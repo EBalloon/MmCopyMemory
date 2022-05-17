@@ -20,6 +20,12 @@
 		}
 	}
 
+# Example
+
+EAC read like this
+
+	MmCopyMemory(Buffer, Address, Size, MM_COPY_MEMORY_PHYSICAL, &Bytes);
+
 
 ![5KPhKr8](https://user-images.githubusercontent.com/29626806/168706720-9d3ee31d-3cf4-4eab-8522-55abb89c4443.png)
 
