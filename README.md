@@ -23,8 +23,8 @@
 EAC read like this
 
 	auto Buffer = ExAllocatePoolWithTag(PagedPool, MEM_SIZE, ExTag);
-       if (Buffer)
-       {	
+       	if (Buffer)
+       	{	
 		MmCopyMemory(Buffer, Address, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
 	}
 
