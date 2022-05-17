@@ -1,7 +1,7 @@
 EAC compares module memory with MmCopyMemory
 - Sections
--Memory outside a legitimate module
-etc
+- Memory outside a legitimate module
+- etc
 
 The easiest way around these checks is to change the bit to 0x2
 
