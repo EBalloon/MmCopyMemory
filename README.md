@@ -22,11 +22,11 @@
 
 EAC read like this
 
-      auto Buffer = ExAllocatePoolWithTag(PagedPool, MEM_SIZE, ExTag);
-      if (!Buffer)
-         return failed;
+     auto Buffer = ExAllocatePoolWithTag(PagedPool, MEM_SIZE, ExTag);
+     if (!Buffer)
+        return failed;
       
-      MmCopyMemory(Buffer, Address, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
+     MmCopyMemory(Buffer, Address, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
 
 
 ![5KPhKr8](https://user-images.githubusercontent.com/29626806/168706720-9d3ee31d-3cf4-4eab-8522-55abb89c4443.png)
