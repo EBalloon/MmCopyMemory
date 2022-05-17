@@ -22,6 +22,10 @@ EAC read like this
     Source.VirtualAddress = Address;
     MmCopyMemory(Buffer, Source, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
 
+
+
+# Bypass
+
   	// bypass scans from MmCopyMemory (this only ignores physical scan)
 	auto MmCopyMemoryPtr = (uintptr_t)MmCopyMemory;
 	for (int index = 0; index < PAGE_SIZE; index++)
