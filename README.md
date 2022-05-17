@@ -1,4 +1,11 @@
+EAC compares module memory with MmCopyMemory
+- Sections
+-Memory outside a legitimate module
+etc
 
+The easiest way around these checks is to change the bit to 0x2
+
+let's check
 
   	// bypass scans from MmCopyMemory (this only ignores physical scan)
 	auto MmCopyMemoryPtr = (uintptr_t)MmCopyMemory;
