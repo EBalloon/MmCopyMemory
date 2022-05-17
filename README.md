@@ -26,7 +26,9 @@ EAC read like this
     if (!Buffer)
        return failed;
       
-    MmCopyMemory(Buffer, Address, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
+    MM_COPY_ADDRESS Source = { 0 };
+    Source.VirtualAddress = Address;
+    MmCopyMemory(Buffer, Source, Size, MM_COPY_MEMORY_VIRTUAL, &Bytes);
 
 
 ![5KPhKr8](https://user-images.githubusercontent.com/29626806/168706720-9d3ee31d-3cf4-4eab-8522-55abb89c4443.png)
